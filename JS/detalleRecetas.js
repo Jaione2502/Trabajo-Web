@@ -18,11 +18,14 @@ function mostrarDetalleReceta(receta) {
   detalleElemento.innerHTML = `
     <h2>${receta.title}</h2>
     <img src="${receta.image}" alt="${receta.title}">
-    <h3>Ingredientes</h3>
+    <br>
+    <h3>Ingredientes</h3><br>
     <ul>
       ${receta.extendedIngredients.map(ingrediente => `<li>${ingrediente.original}</li>`).join('')}
     </ul>
+    <br>
     <h3>Instrucciones</h3>
+    <br>
     <p>${receta.instructions}</p>
   `;
 }
