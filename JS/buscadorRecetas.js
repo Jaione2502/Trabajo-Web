@@ -37,21 +37,26 @@ function mostrarRecetas(recetas) {
         return;
     }
 
-    // Mostrar cada receta
+ 
     recetas.forEach(receta => {
-        const recipeElement = document.createElement("div");
-        recipeElement.classList.add("recipe");
-
-        recipeElement.innerHTML = `
+        const recetaCard = document.createElement('div');
+        recetaCard.classList.add('recipe-card');
+        
+        recetaCard.innerHTML =`
             <div class="recipe-details">
                 <img src="${receta.image}" alt="${receta.title}" />
                 <div>
                     <h3>${receta.title}</h3>
-                     <a href="detalle.html?id=${receta.id}">Ver receta completa</a>
+                    <a href="detalle.html?id=${receta.id}">Ver receta completa</a>
                 </div>
             </div>
-        `;
-
-        recipesContainer.appendChild(recipeElement);
+      `;
+        
+      recipesContainer.appendChild(recetaCard);
     });
+
+
 }
+
+
+
